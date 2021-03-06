@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +12,7 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { RouterModule } from '@angular/router';
 import {routes} from './app.routes';
+import {SharedModule} from './shared/shared.module';
 
 registerLocaleData(en);
 
@@ -22,13 +22,13 @@ registerLocaleData(en);
   ],
   imports: [
     BrowserModule,
-    IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
     FormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "electron-angular": {
+    "angular-portfolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -72,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "electron-angular:build"
+            "browserTarget": "angular-portfolio:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "electron-angular:build:production"
+              "browserTarget": "angular-portfolio:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "electron-angular:build"
+            "browserTarget": "angular-portfolio:build"
           }
         },
         "test": {
@@ -120,16 +120,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "electron-angular:serve"
+            "devServerTarget": "angular-portfolio:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "electron-angular:serve:production"
+              "devServerTarget": "angular-portfolio:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "electron-angular"
+  "defaultProject": "angular-portfolio"
 }
