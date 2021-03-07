@@ -7,7 +7,7 @@ documents:
   - src/**/*.graphql
 # Where to output the services and the list of plugins
 generates:
-  ./src/app/services/spacexGraphql.service.ts:
+  ./src/app/services/wordpressGraphQl.service.ts:
     plugins:
       - typescript
       - typescript-operations

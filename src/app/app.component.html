@@ -9,6 +9,13 @@
 		</nz-header>
 		<nz-content>
 			<div class="inner-content">
+        <ul *ngIf="posts$ | async as posts">
+          <li
+          >
+          {{posts}}
+          {{log(posts)}}
+        </li>
+        </ul>
 				<router-outlet></router-outlet>
 			</div>
 		</nz-content>
