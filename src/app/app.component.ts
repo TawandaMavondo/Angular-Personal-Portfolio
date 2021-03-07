@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { QueryPostsGQL } from './services/wordpressGraphQl.service';
+import { QueryPostsGQL, QueryPostsQuery } from './services/wordpressGraphQl.service';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs'
+import { ApolloQueryResult } from '@apollo/client/core';
 
 @Component({
   selector: 'app-root',
@@ -13,11 +15,11 @@ export class AppComponent implements OnInit {
 
   constructor(private postsService: QueryPostsGQL) { }
 
-  public posts$;
+  public posts$: any;
   ngOnInit(): void {
     this.posts$ = this.postsService.fetch().pipe(
       map(
-        res => res.data.posts
+        res => res.data.posts.edges
       ));
     // console.log(this.posts$)
     console.log('init');

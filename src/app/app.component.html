@@ -10,10 +10,11 @@
 		<nz-content>
 			<div class="inner-content">
         <ul *ngIf="posts$ | async as posts">
-          <li
+          <li *ngFor="let post of posts"
           >
-          {{posts}}
-          {{log(posts)}}
+          <h2>
+            {{post.node.title}}
+          </h2>
         </li>
         </ul>
 				<router-outlet></router-outlet>
