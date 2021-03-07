@@ -1,0 +1,19 @@
+query queryPosts {
+  posts {
+    edges {
+      node {
+        id
+        status
+        template {
+          templateName
+        }
+        date
+        postId
+        title(format: RENDERED)
+        toPing
+        uri
+        content(format: RAW)
+      }
+    }
+  }
+}
