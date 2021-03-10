@@ -13,7 +13,11 @@
           <li *ngFor="let post of posts"
           >
           <h2>
-            {{post.node.title}}
+            {{post.title}}
+            {{log(posts)}}
+            <img *ngIf="post.featuredImage"
+            srcset="{{post.featuredImage.node?.srcSet}}"
+            src="{{post.featuredImage.node?.sourceUrl}}" alt="">
           </h2>
         </li>
         </ul>

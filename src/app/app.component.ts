@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.posts$ = this.postsService.fetch().pipe(
       map(
-        res => res.data.posts.edges
+        res => res.data.posts?.nodes
       ));
     // console.log(this.posts$)
     console.log('init');

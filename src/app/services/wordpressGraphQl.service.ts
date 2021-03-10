@@ -8117,23 +8117,26 @@ export type QueryPostsQuery = (
   { __typename?: 'RootQuery' }
   & { posts?: Maybe<(
     { __typename?: 'RootQueryToPostConnection' }
-    & { edges?: Maybe<Array<Maybe<(
-      { __typename?: 'RootQueryToPostConnectionEdge' }
-      & { node?: Maybe<(
-        { __typename?: 'Post' }
-        & Pick<Post, 'id' | 'status' | 'date' | 'postId' | 'title' | 'toPing' | 'uri' | 'content'>
-        & { template?: Maybe<(
-          { __typename?: 'DefaultTemplate' }
-          & Pick<DefaultTemplate, 'templateName'>
-        ) | (
-          { __typename?: 'Template_AlbumsList' }
-          & Pick<Template_AlbumsList, 'templateName'>
-        ) | (
-          { __typename?: 'Template_Archives' }
-          & Pick<Template_Archives, 'templateName'>
-        ) | (
-          { __typename?: 'Template_WorksList' }
-          & Pick<Template_WorksList, 'templateName'>
+    & { nodes?: Maybe<Array<Maybe<(
+      { __typename?: 'Post' }
+      & Pick<Post, 'content' | 'authorId' | 'date' | 'title' | 'postId' | 'uri'>
+      & { template?: Maybe<(
+        { __typename?: 'DefaultTemplate' }
+        & Pick<DefaultTemplate, 'templateName'>
+      ) | (
+        { __typename?: 'Template_AlbumsList' }
+        & Pick<Template_AlbumsList, 'templateName'>
+      ) | (
+        { __typename?: 'Template_Archives' }
+        & Pick<Template_Archives, 'templateName'>
+      ) | (
+        { __typename?: 'Template_WorksList' }
+        & Pick<Template_WorksList, 'templateName'>
+      )>, featuredImage?: Maybe<(
+        { __typename?: 'NodeWithFeaturedImageToMediaItemConnectionEdge' }
+        & { node?: Maybe<(
+          { __typename?: 'MediaItem' }
+          & Pick<MediaItem, 'sourceUrl' | 'srcSet' | 'uri' | 'title' | 'sizes' | 'id'>
         )> }
       )> }
     )>>> }
@@ -8143,31 +8146,37 @@ export type QueryPostsQuery = (
 export const QueryPostsDocument = gql`
     query queryPosts {
   posts {
-    edges {
-      node {
-        id
-        status
-        template {
-          templateName
+    nodes {
+      content(format: RAW)
+      authorId
+      date
+      title
+      postId
+      uri
+      template {
+        templateName
+      }
+      featuredImage {
+        node {
+          sourceUrl(size: LARGE)
+          srcSet(size: MEDIUM)
+          uri
+          title
+          sizes(size: MEDIUM)
+          id
         }
-        date
-        postId
-        title(format: RENDERED)
-        toPing
-        uri
-        content(format: RAW)
       }
     }
   }
 }
     `;
 
-@Injectable({
+  @Injectable({
     providedIn: 'root'
   })
   export class QueryPostsGQL extends Apollo.Query<QueryPostsQuery, QueryPostsQueryVariables> {
     document = QueryPostsDocument;
-
+    
     constructor(apollo: Apollo.Apollo) {
       super(apollo);
     }
