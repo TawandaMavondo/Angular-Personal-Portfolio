@@ -13,6 +13,7 @@ import en from '@angular/common/locales/en';
 import { RouterModule } from '@angular/router';
 import {routes} from './app.routes';
 import {SharedModule} from './shared/shared.module';
+import {LayoutModule} from './layout/layout.module';
 import { GraphQLModule } from './graphql.module';
 
 registerLocaleData(en);
@@ -30,7 +31,8 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
-    GraphQLModule
+    GraphQLModule,
+    LayoutModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

@@ -8176,7 +8176,7 @@ export const QueryPostsDocument = gql`
   })
   export class QueryPostsGQL extends Apollo.Query<QueryPostsQuery, QueryPostsQueryVariables> {
     document = QueryPostsDocument;
-    
+
     constructor(apollo: Apollo.Apollo) {
       super(apollo);
     }
