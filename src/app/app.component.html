@@ -1,16 +1,7 @@
 <app-layout>
   <nz-content>
     <div class="inner-content">
-      <ul *ngIf="posts$ | async as posts">
-        <li *ngFor="let post of posts">
-          <h2>
-            {{post.title}}
-            {{log(posts)}}
-          </h2>
-          <img *ngIf="post.featuredImage" srcset="{{post.featuredImage.node?.srcSet}}"
-          src="{{post.featuredImage.node?.sourceUrl}}" alt="">
-        </li>
-      </ul>
+      
     </div>
   </nz-content>
 </app-layout>

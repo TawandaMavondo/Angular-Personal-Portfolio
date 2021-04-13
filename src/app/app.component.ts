@@ -18,14 +18,15 @@ export class AppComponent implements OnInit {
   public posts$: any;
 
 
- 
+
   ngOnInit(): void {
-    this.posts$ = this.postsService.fetch().pipe(
-      map(
-        res => res.data.posts?.nodes
-      ));
-  }
-  log(post): void {
-    console.log(post);
+    //   this.posts$ = this.postsService.fetch().pipe(
+    //     map(
+    //       res => res.data.posts?.nodes
+    //     ));
+    // }
+    // log(post): void {
+    //   console.log(post);
+    // }
   }
 }
