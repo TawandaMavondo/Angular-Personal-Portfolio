@@ -1,11 +1,35 @@
 <nz-layout class="app-layout">
-	<nz-layout>
-		<nz-header>
-			<div class="app-header">
+  <nz-layout>
+    <nz-header>
+      <div class="app-header">
+        <div class="container-fluid py-4 px-3">
+          <div class="row align-items-center mx-0">
+            <a href="#" class="logo">
+              <h4 class="green-color">
+                < {{"T.Mavondo >"}}
+              </h4>
+            </a>
 
-			</div>
-		</nz-header>
-
+            <div class="navigation ml-auto">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link blue-black " href="#"><span class="green-color">01.</span> About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link blue-black" href="#"><span class="green-color">02.</span> Experience</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link blue-black" href="#"><span class="green-color">03.</span> Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link blue-black" href="#"><span class="green-color">04.</span> Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nz-header>
     <ng-content></ng-content>
-	</nz-layout>
+  </nz-layout>
 </nz-layout>

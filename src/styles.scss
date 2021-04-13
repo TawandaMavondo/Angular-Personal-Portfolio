@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+// Base Colors
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~assets/sf-mono/style.css";
+@import "~assets/calibre-font/style.css";
+
+$backgroundBlue: #021126;
+$fontGreen: #64ffda;
+$blueBlack: #8892b0;
+$fontColorLight: #ccd6f6;
+
+body,
+.app-layout,
+.ant-layout,
+.app-header {
+  background: $backgroundBlue !important;
+}
+body,
+p,
+h1,
+span,
+h2,
+h3 {
+  // font-family: "Calibre Regular";
+  font-weight: normal;
+}
+a,
+button {
+  font-family: "SF Mono Regular";
+  font-weight: normal;
+}
+a {
+  &:hover {
+    color: #64ffda;
+  }
+}
+.green-color {
+  color: $fontGreen !important;
+}
+.blue-black {
+  color: $blueBlack;
+}
