@@ -11,11 +11,11 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { RouterModule } from '@angular/router';
-import {routes} from './app.routes';
-import {SharedModule} from './shared/shared.module';
-import {LayoutModule} from './layout/layout.module';
+import { routes } from './app.routes';
+import { SharedModule } from './shared/shared.module';
+import { LayoutModule } from './layout/layout.module';
 import { GraphQLModule } from './graphql.module';
-
+import { ComponentsModule } from './components/components.module';
 registerLocaleData(en);
 
 @NgModule({
@@ -32,7 +32,8 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     SharedModule,
     GraphQLModule,
-    LayoutModule
+    LayoutModule,
+    ComponentsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
