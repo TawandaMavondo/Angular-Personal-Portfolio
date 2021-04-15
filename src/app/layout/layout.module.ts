@@ -12,8 +12,7 @@ import { routes } from './layout.routes';
     CommonModule,
     NzLayoutModule,
     RouterModule.forRoot(routes)
-
   ],
-  exports: [LayoutComponent]
+  exports: [LayoutComponent, RouterModule]
 })
 export class LayoutModule { }
