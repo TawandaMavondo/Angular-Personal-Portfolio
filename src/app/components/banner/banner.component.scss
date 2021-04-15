@@ -11,4 +11,21 @@
       font-weight: bold;
     }
   }
+  p {
+    max-width: 500px;
+    text-align: start;
+    font-size: 20px;
+  }
+  .btn {
+    display: block !important;
+    border: 1.5px solid #64ffda;
+    color: #64ffda;
+    max-width: 200px;
+    padding: 15px;
+    transition-property: background;
+    transition-duration: 500ms;
+    &:hover {
+      background-color: rgba(#64ffda, 0.18);
+    }
+  }
 }
