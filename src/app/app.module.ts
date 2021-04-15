@@ -16,6 +16,7 @@ import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './layout/layout.module';
 import { GraphQLModule } from './graphql.module';
 import { ComponentsModule } from './components/components.module';
+import { HomepageModule } from './homepage/homepage.module'
 registerLocaleData(en);
 
 @NgModule({
@@ -33,7 +34,8 @@ registerLocaleData(en);
     SharedModule,
     GraphQLModule,
     LayoutModule,
-    ComponentsModule
+    ComponentsModule,
+    HomepageModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
