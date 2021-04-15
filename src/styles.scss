@@ -3,6 +3,7 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~assets/sf-mono/style.css";
 @import "~assets/calibre-font/style.css";
+@import "~assets/calibre/stylesheet.css";
 
 $backgroundBlue: #021126;
 $fontGreen: #64ffda;
@@ -21,7 +22,7 @@ h1,
 span,
 h2,
 h3 {
-  // font-family: "Calibre Regular";
+  font-family: "Calibre";
   font-weight: normal;
 }
 a,
@@ -39,4 +40,7 @@ a {
 }
 .blue-black {
   color: $blueBlack;
+}
+.font-light {
+  color: $fontColorLight;
 }

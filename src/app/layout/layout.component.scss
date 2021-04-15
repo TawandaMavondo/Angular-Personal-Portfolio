@@ -6,7 +6,9 @@
 }
 
 .app-layout {
-  height: 100vh;
+  .page-wrapper {
+    margin-top: 80px;
+  }
 }
 
 .header-trigger {

@@ -1,0 +1,14 @@
+.banner {
+  .intro {
+    text-align: left;
+    p {
+      font-size: 20px;
+    }
+    h1,
+    h2 {
+      font-size: clamp(40px, 8vw, 80px);
+      font-weight: 400;
+      font-weight: bold;
+    }
+  }
+}
