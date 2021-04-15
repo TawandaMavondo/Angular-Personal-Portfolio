@@ -1,0 +1,21 @@
+.container {
+  .numbered-section-header {
+    font-weight: bold;
+    &::before {
+      position: relative;
+      content: "01.";
+      color: #64ffda;
+      font-weight: 400;
+      font-family: "SF Mono Regular";
+      font-size: clamp(20px, 8vw, 25px);
+    }
+    &::after {
+      width: 230px;
+      display: none;
+      position: relative;
+      content: "";
+      height: 1px;
+      background-color: #64ffda;
+    }
+  }
+}
