@@ -7570,6 +7570,14 @@ ng-zorro-antd@11.4.0:
     resize-observer-polyfill "^1.5.1"
     tslib "^2.0.0"
 
+ngx-typed-js@^2.0.2:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ngx-typed-js/-/ngx-typed-js-2.1.0.tgz#f7b614002705aeb2266117037e2d02c2067e12aa"
+  integrity sha512-YBVjgPEERd5/FvHd+vLOSw22x8lT+tHCxX1JTzetTkZ4exCF0FRMTim1AjrYZR1o92rBtx7u9rIY1KXV7fheng==
+  dependencies:
+    tslib "^2.0.0"
+    typed.js "^2.0.12"
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
@@ -10737,6 +10745,11 @@ type@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/type/-/type-2.3.0.tgz#ada7c045f07ead08abf9e2edd29be1a0c0661132"
   integrity sha512-rgPIqOdfK/4J9FhiVrZ3cveAjRRo5rsQBAIhnylX874y1DX/kEKSVdLsnuHB6l1KTjHyU01VjiMBHgU2adejyg==
+
+typed.js@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.12.tgz#246aff074c8e18d32ec27acb7be15094ac0bc0e1"
+  integrity sha512-lyACZh1cu+vpfYY3DG/bvsGLXXbdoDDpWxmqta10IQUdMXisMXOEyl+jos+YT9uBbzK4QaKYBjT3R0kTJO0Slw==
 
 typedarray@^0.0.6:
   version "0.0.6"
