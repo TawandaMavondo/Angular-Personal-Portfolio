@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NZ_ICONS, NzIconModule } from 'ng-zorro-antd/icon';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import {
   MenuFoldOutline,
@@ -11,8 +12,8 @@ import {
 const icons = [MenuFoldOutline, MenuUnfoldOutline, DashboardOutline, FormOutline];
 
 @NgModule({
-  imports: [NzIconModule],
-  exports: [NzIconModule],
+  imports: [NzIconModule, FontAwesomeModule],
+  exports: [NzIconModule, FontAwesomeModule],
   providers: [
     { provide: NZ_ICONS, useValue: icons }
   ]

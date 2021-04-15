@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomepageComponent } from './homepage.component';
 import { BannerModule } from '../components/banner/banner.module';
 import { AboutComponent } from './about/about.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -10,7 +11,8 @@ import { AboutComponent } from './about/about.component';
   declarations: [HomepageComponent, AboutComponent],
   imports: [
     CommonModule,
-    BannerModule
+    BannerModule,
+    FontAwesomeModule
   ]
 })
 export class HomepageModule { }

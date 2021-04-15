@@ -16,7 +16,9 @@ import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './layout/layout.module';
 import { GraphQLModule } from './graphql.module';
 import { ComponentsModule } from './components/components.module';
-import { HomepageModule } from './homepage/homepage.module'
+import { HomepageModule } from './homepage/homepage.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -35,7 +37,8 @@ registerLocaleData(en);
     GraphQLModule,
     LayoutModule,
     ComponentsModule,
-    HomepageModule
+    HomepageModule,
+    FontAwesomeModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
