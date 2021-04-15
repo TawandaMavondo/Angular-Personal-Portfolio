@@ -23,7 +23,8 @@ export class BannerComponent implements OnInit {
       cursorChar: '|',
       loop: true
     }
-    const typedE = new typed.default('.typing', options);
+    // tslint:disable-next-line: no-unused-expression
+    new typed.default('.typing', options);
   }
 
 }
