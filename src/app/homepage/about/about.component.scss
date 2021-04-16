@@ -19,13 +19,20 @@
     }
   }
   .desc {
-    p {
+   > p {
       font-size: 20px;
       padding: 25px 0;
     }
     h3 {
       font-weight: bold;
       text-decoration: underline;
+    }
+    .skills {
+      flex-wrap: wrap;
+      text-align: left;
+      p {
+        width: 50%;
+      }
     }
   }
 }
