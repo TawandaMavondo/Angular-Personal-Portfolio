@@ -19,7 +19,7 @@
     }
   }
   .desc {
-   > p {
+    > p {
       font-size: 20px;
       padding: 25px 0;
     }
@@ -28,10 +28,27 @@
       text-decoration: underline;
     }
     .skills {
-      flex-wrap: wrap;
-      text-align: left;
-      p {
-        width: 50%;
+      padding-left: 0;
+      padding-top: 20px;
+      display: grid;
+      overflow: hidden;
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+      li {
+        list-style: none;
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        // width: 50%;
+        &::before {
+          content: "▹";
+          font-size: 15px;
+          padding-top: 4px;
+          position: absolute;
+          color: #64ffda;
+          left: 0;
+          line-height: 12px;
+        }
       }
     }
   }
