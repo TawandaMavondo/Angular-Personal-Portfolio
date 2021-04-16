@@ -7,9 +7,10 @@ import * as typed from 'typed.js';
 })
 export class BannerComponent implements OnInit {
   private readonly strings = [
-    'I build things for the Web.',
     'I build software for fun.',
-    'I build scalable backend services.'
+    'I build scalable backends.',
+    'I build things for the Web.',
+
   ];
   constructor() { }
 
@@ -21,7 +22,7 @@ export class BannerComponent implements OnInit {
       backDelay: 500,
       showCursor: false,
       cursorChar: '|',
-      loop: true
+      loop: false
     }
     // tslint:disable-next-line: no-unused-expression
     new typed.default('.typing', options);
