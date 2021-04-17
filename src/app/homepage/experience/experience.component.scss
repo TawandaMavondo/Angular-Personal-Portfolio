@@ -1,0 +1,7 @@
+.experience {
+  .numbered-section-header {
+    &:before {
+      content: "02.";
+    }
+  }
+}

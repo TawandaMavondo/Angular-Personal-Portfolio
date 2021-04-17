@@ -48,6 +48,10 @@ a {
 .font-light {
   color: $fontColorLight;
 }
+.section {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
 .numbered-section-header {
   font-weight: bold;
   &::before {
