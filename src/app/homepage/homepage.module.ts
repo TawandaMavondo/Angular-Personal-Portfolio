@@ -5,6 +5,7 @@ import { BannerModule } from '../components/banner/banner.module';
 import { AboutComponent } from './about/about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ExperienceComponent } from './experience/experience.component';
+import { NgbNavModule, NgbNavItem, NgbNavOutlet } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -13,7 +14,9 @@ import { ExperienceComponent } from './experience/experience.component';
   imports: [
     CommonModule,
     BannerModule,
-    FontAwesomeModule
-  ]
+    FontAwesomeModule,
+    NgbNavModule
+  ],
+  exports: [HomepageComponent, AboutComponent, ExperienceComponent]
 })
 export class HomepageModule { }

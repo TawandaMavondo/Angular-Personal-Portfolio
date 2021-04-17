@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 // Base Colors
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import '~bootstrap/scss/bootstrap';
 @import "~assets/sf-mono/style.css";
 @import "~assets/calibre-font/style.css";
 @import "~assets/calibre/stylesheet.css";
@@ -71,3 +72,5 @@ a {
     background-color: #64ffda;
   }
 }
+
+/* Importing Bootstrap SCSS file. */

@@ -18,6 +18,7 @@ import { GraphQLModule } from './graphql.module';
 import { ComponentsModule } from './components/components.module';
 import { HomepageModule } from './homepage/homepage.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 registerLocaleData(en);
 
@@ -38,7 +39,8 @@ registerLocaleData(en);
     LayoutModule,
     ComponentsModule,
     HomepageModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgbModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
