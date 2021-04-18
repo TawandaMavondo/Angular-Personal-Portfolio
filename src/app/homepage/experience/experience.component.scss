@@ -14,15 +14,31 @@
   .jobs {
     .nav-tabs {
       border: none;
-      overflow-x: auto;
+      overflow-x: scroll;
       margin-bottom: 20px;
+      display: flex;
+      flex-wrap: nowrap;
+      // flex-direction: column;
       li {
         padding-right: 1rem;
         a {
           border: none;
           padding: 0;
           color: inherit;
+          white-space: nowrap;
+          padding: 10px 5px;
+          transition-property: background;
+          transition-duration: 300ms;
+          &:hover {
+            background: $lightNavy;
+          }
         }
+      }
+    }
+    .content {
+
+      h2 {
+        margin-bottom: 7px;
       }
     }
   }
