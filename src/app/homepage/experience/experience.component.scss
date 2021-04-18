@@ -1,7 +1,29 @@
+@import "../../styles/colors.scss";
 .experience {
+  .active {
+    background: transparent;
+    color: $fontGreen !important;
+    border: none;
+    border-bottom: 2px solid $fontGreen !important;
+  }
   .numbered-section-header {
     &:before {
       content: "02.";
+    }
+  }
+  .jobs {
+    .nav-tabs {
+      border: none;
+      overflow-x: auto;
+      margin-bottom: 20px;
+      li {
+        padding-right: 1rem;
+        a {
+          border: none;
+          padding: 0;
+          color: inherit;
+        }
+      }
     }
   }
 }
