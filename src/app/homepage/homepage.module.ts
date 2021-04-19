@@ -6,11 +6,12 @@ import { AboutComponent } from './about/about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ExperienceComponent } from './experience/experience.component';
 import { NgbNavModule, NgbNavItem, NgbNavOutlet } from '@ng-bootstrap/ng-bootstrap';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 
 @NgModule({
-  declarations: [HomepageComponent, AboutComponent, ExperienceComponent],
+  declarations: [HomepageComponent, AboutComponent, ExperienceComponent, PortfolioComponent],
   imports: [
     CommonModule,
     BannerModule,
