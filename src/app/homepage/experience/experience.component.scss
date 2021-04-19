@@ -47,7 +47,6 @@
             content: "▹";
             font-size: 16px;
             padding-top: 4px;
-            // display: flex;
             position: absolute;
             color: #64ffda;
             left: 0;
@@ -61,17 +60,18 @@
 
 @media screen and (min-width: 768px) {
   .experience {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     .jobs {
       margin-top: 50px !important;
       .nav-tabs {
         flex-direction: column;
         overflow-y: scroll;
       }
-      margin: 0 auto;
       li {
         margin: 10px 0;
       }
-      max-width: 70%;
       .content {
         margin-top: 0;
       }
