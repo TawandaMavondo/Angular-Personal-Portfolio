@@ -34,6 +34,7 @@
     "font-awesome": "^4.7.0",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.11.0",
+    "http-server": "^0.12.3",
     "ng-zorro-antd": "11.4.0",
     "ngx-markdown": "^11.1.2",
     "ngx-typed-js": "^2.0.2",
