@@ -19,6 +19,8 @@ import { ComponentsModule } from './components/components.module';
 import { HomepageModule } from './homepage/homepage.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 registerLocaleData(en);
 
@@ -40,7 +42,8 @@ registerLocaleData(en);
     ComponentsModule,
     HomepageModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
