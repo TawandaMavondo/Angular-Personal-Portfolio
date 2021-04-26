@@ -7,17 +7,25 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ExperienceComponent } from './experience/experience.component';
 import { NgbNavModule, NgbNavItem, NgbNavOutlet } from '@ng-bootstrap/ng-bootstrap';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ProjectcardComponent } from '../components/projectcard/projectcard.component';
+import { ComponentsModule } from '../components/components.module';
 
 
 
 @NgModule({
-  declarations: [HomepageComponent, AboutComponent, ExperienceComponent, PortfolioComponent],
+  declarations: [
+    HomepageComponent,
+    AboutComponent,
+    ExperienceComponent,
+    PortfolioComponent,
+  ],
   imports: [
     CommonModule,
     BannerModule,
     FontAwesomeModule,
-    NgbNavModule
+    NgbNavModule,
+    ComponentsModule
   ],
-  exports: [HomepageComponent, AboutComponent, ExperienceComponent]
+  exports: [HomepageComponent, AboutComponent, ExperienceComponent,]
 })
 export class HomepageModule { }
