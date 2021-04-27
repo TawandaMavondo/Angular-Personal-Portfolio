@@ -42,6 +42,25 @@
         font-family: "SF Mono Regular";
       }
     }
+    .links {
+      .ext-link,
+      .git-link {
+        font-size: 25px;
+        padding: 0 10px;
+        transition: color 300ms ease-in-out;
+        &:hover {
+          color: $fontGreen;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .project-card {
+    .container {
+      padding: 0 0;
+    }
   }
 }
 
@@ -68,6 +87,9 @@
         }
         .technologies {
           justify-content: flex-end;
+          li {
+            font-size: clamp(12px, 0.7rem, 14px);
+          }
         }
       }
     }

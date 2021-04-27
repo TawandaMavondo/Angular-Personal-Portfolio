@@ -41,7 +41,7 @@ registerLocaleData(en);
     LayoutModule,
     ComponentsModule,
     HomepageModule,
-    FontAwesomeModule,
+    // FontAwesomeModule,
     NgbModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
