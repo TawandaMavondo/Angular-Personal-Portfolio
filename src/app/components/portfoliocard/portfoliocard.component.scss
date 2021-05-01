@@ -1,0 +1,24 @@
+@import "../../styles/colors.scss";
+
+.nz-card {
+  background: $lightNavy;
+  border: none;
+ > .ant-card-head {
+    border: none !important;
+  }
+}
+
+.ext-link,
+.git-link,
+.folder {
+  font-size: 20px;
+  padding: 0 10px;
+  color: $fontColorLight;
+  transition: color 300ms ease-in-out;
+  &:hover {
+    color: $fontGreen;
+  }
+}
+.folder {
+  font-size: 33px;
+}

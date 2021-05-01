@@ -1,8 +1,17 @@
 .portfolio {
-  margin-top: 100px;//@at-root
+  margin-top: 100px; //@at-root
   .numbered-section-header {
     &::before {
       content: "03.";
+    }
+  }
+  .other-project {
+    margin-top: 25vh;
+    .numbered-section-header {
+      text-align: center;
+      &::before {
+        display: none;
+      }
     }
   }
 }

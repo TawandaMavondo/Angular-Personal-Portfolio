@@ -1,1 +1,17 @@
-<p>portfoliocard works!</p>
+<nz-card class="nz-card"  [nzBorderless]="true" [nzExtra]="extraTemplate" [nzTitle]="titleTemplate">
+  <h2>
+    
+  </h2>
+</nz-card>
+
+<ng-template #extraTemplate >
+  <a href="#">
+    <fa-icon class="git-link" [icon]="faGithub"></fa-icon>
+  </a>
+  <a href="#">
+    <fa-icon class="ext-link" [icon]="faExternalLinkAlt"></fa-icon>
+  </a>
+</ng-template>
+<ng-template #titleTemplate >
+  <fa-icon class="folder" [icon]="faFolder"></fa-icon>
+</ng-template>
