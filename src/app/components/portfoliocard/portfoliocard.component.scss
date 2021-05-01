@@ -1,13 +1,5 @@
 @import "../../styles/colors.scss";
 
-.nz-card {
-  background: $lightNavy;
-  border: none;
- > .ant-card-head {
-    border: none !important;
-  }
-}
-
 .ext-link,
 .git-link,
 .folder {
@@ -20,5 +12,39 @@
   }
 }
 .folder {
-  font-size: 33px;
+  font-size: 35px;
+  color: $fontGreen;
+}
+.nz-card {
+  background: $lightNavy;
+  border: none;
+  .card-title {
+    font-weight: bold;
+    font-family: "SF Mono Regular";
+    font-size: clamp(17px, 6vw, 22px);
+    margin-bottom: 15px;
+    transition-property: color;
+    transition-duration: 300ms;
+  }
+  .project-desc {
+  }
+  .technologies {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      padding-right: 10px;
+      font-family: "SF Mono Regular";
+      font-size: small;
+    }
+  }
+  transition-duration: 300ms;
+  transition-property: transform;
+  &:hover {
+    transform: translateY(-10px);
+    .card-title {
+      color: $fontGreen;
+    }
+  }
 }
