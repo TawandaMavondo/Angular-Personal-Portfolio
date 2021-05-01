@@ -7,7 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ExperienceComponent } from './experience/experience.component';
 import { NgbNavModule, NgbNavItem, NgbNavOutlet } from '@ng-bootstrap/ng-bootstrap';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ProjectcardComponent } from '../components/projectcard/projectcard.component';
+import { ProjectCardComponent } from '../components/projectcard/projectcard.component';
 import { ComponentsModule } from '../components/components.module';
 
 

@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
   templateUrl: './projectcard.component.html',
   styleUrls: ['./projectcard.component.scss']
 })
-export class ProjectcardComponent implements OnInit {
+export class ProjectCardComponent implements OnInit {
   public faExternalLinkAlt = faExternalLinkAlt;
   public faGithub = faGithub;
 
