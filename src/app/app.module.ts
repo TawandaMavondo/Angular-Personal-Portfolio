@@ -21,7 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-
+import { AnimateModule } from './animate/animate.module';
 registerLocaleData(en);
 
 @NgModule({
@@ -42,6 +42,7 @@ registerLocaleData(en);
     ComponentsModule,
     HomepageModule,
     // FontAwesomeModule,
+    AnimateModule,
     NgbModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
