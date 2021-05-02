@@ -9,6 +9,7 @@ import { NgbNavModule, NgbNavItem, NgbNavOutlet } from '@ng-bootstrap/ng-bootstr
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ProjectCardComponent } from '../components/projectcard/projectcard.component';
 import { ComponentsModule } from '../components/components.module';
+import { AnimateModule } from '../animate/animate.module';
 
 
 
@@ -24,6 +25,7 @@ import { ComponentsModule } from '../components/components.module';
     BannerModule,
     FontAwesomeModule,
     NgbNavModule,
+    AnimateModule,
     ComponentsModule
   ],
   exports: [HomepageComponent, AboutComponent, ExperienceComponent,]
