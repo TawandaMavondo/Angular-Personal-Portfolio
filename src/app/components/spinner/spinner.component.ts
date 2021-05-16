@@ -22,14 +22,14 @@ export class SpinnerComponent implements OnDestroy {
             if (event instanceof NavigationStart) {
                 this.isSpinnerVisible = true;
             } else if ( event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
-                this.isSpinnerVisible = true;
+                this.isSpinnerVisible = false;
             }
         }, () => {
-            this.isSpinnerVisible = true;
+            this.isSpinnerVisible = false;
         });
     }
 
     ngOnDestroy(): void {
-        this.isSpinnerVisible = true;
+        this.isSpinnerVisible = false;
     }
 }
