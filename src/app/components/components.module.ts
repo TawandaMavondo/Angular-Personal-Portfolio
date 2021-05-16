@@ -5,16 +5,17 @@ import { ProjectCardComponent } from './projectcard/projectcard.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PortfolioCardComponent } from './portfoliocard/portfoliocard.component';
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 @NgModule({
-  declarations: [ProjectCardComponent, PortfolioCardComponent],
+  declarations: [ProjectCardComponent, PortfolioCardComponent, SpinnerComponent],
   imports: [
     CommonModule,
     BannerModule,
     FontAwesomeModule,
     NzCardModule
   ],
-  exports: [BannerModule, ProjectCardComponent, PortfolioCardComponent]
+  exports: [BannerModule, ProjectCardComponent, PortfolioCardComponent, SpinnerComponent]
 })
 export class ComponentsModule { }

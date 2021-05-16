@@ -1,3 +1,5 @@
+@import "../../styles/colors.scss";
+
 .portfolio {
   margin-top: 100px; //@at-root
   .numbered-section-header {
@@ -12,6 +14,18 @@
       &::before {
         display: none;
       }
+    }
+  }
+  .btn {
+    display: block !important;
+    border: 1.5px solid #64ffda;
+    color: #64ffda;
+    max-width: 200px;
+    padding: 15px;
+    transition-property: background;
+    transition-duration: 500ms;
+    &:hover {
+      background-color: rgba(#64ffda, 0.18);
     }
   }
 }
