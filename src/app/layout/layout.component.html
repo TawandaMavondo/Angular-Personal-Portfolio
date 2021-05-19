@@ -10,13 +10,11 @@
               </h4>
             </a>
             <div class="navigation ml-auto">
-
               <ul class="nav">
                 <li *ngFor="let item of navItems,let i =index" class="nav-item">
                   <a class="nav-link blue-black " (click)="scrollToSection(item.id)">
                     <span class="green-color">0{{i+1}}.</span> {{item.name}}</a>
                 </li>
-
               </ul>
             </div>
           </div>

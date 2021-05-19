@@ -7,6 +7,7 @@
 
 .app-layout {
   .page-wrapper {
+    // margin-top: 131px;
     margin-top: 80px;
   }
 }
@@ -22,7 +23,8 @@
 nz-header {
   padding: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 200;
+  // position: fixed;
 }
 
 .app-header {
@@ -40,9 +42,7 @@ nz-header {
     .nav {
       nav-item {
         a {
-          &::hover {
-            // color: $fontGreen;
-          }
+          font-size: 1em !important;
         }
       }
     }
