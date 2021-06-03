@@ -11,7 +11,9 @@ import { routes } from './layout.routes';
   imports: [
     CommonModule,
     NzLayoutModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {
+    initialNavigation: 'enabled'
+})
   ],
   exports: [LayoutComponent, RouterModule]
 })
