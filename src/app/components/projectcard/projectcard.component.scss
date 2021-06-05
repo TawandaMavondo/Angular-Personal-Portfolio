@@ -6,6 +6,10 @@
     position: relative;
     width: fit-content;
     height: fit-content;
+    img{
+      width:100%;
+      height: auto;
+    }
     .color-overlay {
       position: absolute;
       width: 100%;
@@ -56,27 +60,6 @@
   }
 }
 
-// .reverse {
-//   .container {
-//     display: flex !important;
-//     flex-direction: row-reverse !important;
-//     align-items: flex-start !important;
-//     .project-img-container{
-//       margin-right: auto !important;
-//     }
-//     .project-info {
-//       text-align: start !important;
-//       .desc {
-//         left: 0 !important;
-//         right: -20% !important;
-//       }
-//       .technologies {
-//         justify-content: flex-start !important;
-//       }
-//     }
-//   }
-// }
-
 @media screen and (max-width: 576px) {
   .project-card {
     .container {
@@ -91,7 +74,7 @@
       display: flex !important;
       flex-direction: row-reverse !important;
       align-items: flex-start !important;
-      .project-img-container{
+      .project-img-container {
         margin-right: auto !important;
       }
       .project-info {
@@ -111,6 +94,13 @@
     .container {
       display: flex;
       align-items: flex-start;
+      .project-img-container{
+        width: 70%;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
       .project-info {
         margin-top: 0;
         text-align: end;

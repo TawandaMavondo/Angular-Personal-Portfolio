@@ -29,13 +29,11 @@ registerLocaleData(en);
     AppComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     NzLayoutModule,
     NzMenuModule,
     FormsModule,
-    RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
-}),
+    RouterModule.forRoot(routes),
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
