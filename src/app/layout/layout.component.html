@@ -6,9 +6,14 @@
           <div class="row align-items-center mx-0">
             <a href="#" class="logo">
               <h4 class="green-color">
-                < {{"T.Mavondo>"}}
+                <{{"T.Mavondo>"}}
               </h4>
             </a>
+            <button class="hamburger ml-auto" (click)="open()">
+              <div class="ham-box">
+                <div class="ham-box-inner"></div>
+              </div>
+            </button>
             <div class="navigation ml-auto">
               <ul class="nav">
                 <li *ngFor="let item of navItems,let i =index" class="nav-item">
@@ -26,4 +31,14 @@
       </router-outlet>
     </div>
   </nz-layout>
+  <nz-drawer class="drawer" [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" (nzOnClose)="close()">
+    <ng-container *nzDrawerContent>
+      <ul class="nav">
+        <li *ngFor="let item of navItems,let i =index" class="nav-item">
+          <a class="nav-link blue-black " (click)="scrollToSection(item.id)">
+            <span class="green-color">0{{i+1}}.</span> {{item.name}}</a>
+        </li>
+      </ul>
+    </ng-container>
+  </nz-drawer>
 </nz-layout>

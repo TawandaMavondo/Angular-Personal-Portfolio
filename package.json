@@ -46,6 +46,7 @@
     "http-server": "^0.12.3",
     "ng-zorro-antd": "11.4.0",
     "ngx-markdown": "^11.1.2",
+    "ngx-page-scroll": "^7.0.5",
     "ngx-typed-js": "^2.0.2",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",

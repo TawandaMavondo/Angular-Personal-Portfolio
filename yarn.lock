@@ -8300,6 +8300,13 @@ ngx-markdown@^11.1.2:
     prismjs "^1.23.0"
     tslib "^2.0.0"
 
+ngx-page-scroll@^7.0.5:
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/ngx-page-scroll/-/ngx-page-scroll-7.0.5.tgz#6479f76e4c92f8783f6534a38ef1bbac2d6f6578"
+  integrity sha512-9OM4WXFjS9K+DZe4J5lg2vonGDzQxR21rW2XnYirPbs+OtTRak0bt35qBaWS82rHc7cdOeXAvsJ/eVk5kEiEgg==
+  dependencies:
+    tslib "^2.0.0"
+
 ngx-typed-js@^2.0.2:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ngx-typed-js/-/ngx-typed-js-2.1.0.tgz#f7b614002705aeb2266117037e2d02c2067e12aa"
