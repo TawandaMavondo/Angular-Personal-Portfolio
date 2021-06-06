@@ -102,6 +102,7 @@ nz-header {
 }
 
 .ham-box-open {
+  z-index: 1000;
   .ham-box-inner {
     transition-delay: 0.12s;
     transform: rotate(225deg);

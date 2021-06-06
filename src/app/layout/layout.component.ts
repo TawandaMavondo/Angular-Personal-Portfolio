@@ -17,6 +17,10 @@ export class LayoutComponent implements OnInit {
   isCollapsed = false;
   visible = false;
   private drawerButton: Element;
+  public drawerBodyStyles = {
+    backgroundColor: '#021126',
+  }
+
 
   public open(): void {
     if (this.drawerButton.classList.contains("ham-box-open")) {

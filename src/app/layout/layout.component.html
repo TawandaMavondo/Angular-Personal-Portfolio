@@ -31,10 +31,11 @@
       </router-outlet>
     </div>
   </nz-layout>
-  <nz-drawer class="drawer" [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" (nzOnClose)="close()">
+  <nz-drawer class="drawer" [nzZIndex]='10' [nzBodyStyle]="drawerBodyStyles" [nzClosable]="false" [nzVisible]="visible"
+    nzPlacement="right" (nzOnClose)="close()">
     <ng-container *nzDrawerContent>
-      <ul class="nav">
-        <li *ngFor="let item of navItems,let i =index" class="nav-item">
+      <ul class="nav mt-5">
+        <li *ngFor="let item of navItems,let i =index" class="nav-item py-4">
           <a class="nav-link blue-black " (click)="scrollToSection(item.id)">
             <span class="green-color">0{{i+1}}.</span> {{item.name}}</a>
         </li>
