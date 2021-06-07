@@ -1,7 +1,8 @@
-import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { StringValueNode } from 'graphql';
-
+import { DOCUMENT, ViewportScroller } from '@angular/common';
+import { Inject } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { trigger, state, transition, style, animate } from '@angular/animations';
+import { toInteger } from '@ng-bootstrap/ng-bootstrap/util/util';
 type NavItem = {
   name: string,
   id: string,
@@ -10,13 +11,28 @@ type NavItem = {
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+  styleUrls: ['./layout.component.scss'],
+  animations: [
+    trigger("fade",
+      [
+        state('void', style({ opacity: 0 })),
+        transition(':enter', [animate(300)]),
+        transition(':leave', [animate(500)]),
+      ])
+  ]
 })
 
 export class LayoutComponent implements OnInit {
   isCollapsed = false;
   visible = false;
   private drawerButton: Element;
+  private didScroll: boolean;
+  private lastScroll = 0;
+  private deltaOffset = 5;
+  private headerHeight = 0;
+  private headerElement: Element;
+
+
   public drawerBodyStyles = {
     backgroundColor: '#021126',
   }
@@ -58,11 +74,22 @@ export class LayoutComponent implements OnInit {
   ];
 
   constructor(
-    private viewPortScroller: ViewportScroller
+    private viewPortScroller: ViewportScroller,
   ) { }
 
   ngOnInit(): void {
     this.drawerButton = document.querySelector('.hamburger');
+    this.headerElement = document.querySelector('.app-header');
+    this.headerHeight = this.headerElement.clientHeight;
+
+    setInterval(() => {
+      if (this.didScroll) {
+        this.hasScrolled();
+        this.didScroll = false;
+        console.log(this.didScroll);
+      }
+    }, 250)
+
   }
 
   public scrollToSection(id: string): void {
@@ -74,5 +101,32 @@ export class LayoutComponent implements OnInit {
     this.viewPortScroller.scrollToPosition([1, 400])
 
   }
+
+
+
+
+  @HostListener('window:scroll', ['$event'])
+  private onWindowsScroll(e) {
+    // this.didScroll = true;
+    console.log("scrolled");
+    this.hasScrolled()
+  }
+
+  private hasScrolled() {
+    let st = window.pageYOffset;
+
+    if (Math.abs(this.lastScroll - st) <= this.deltaOffset) {
+      return
+    }
+    if (st > this.lastScroll && st > this.headerHeight) {
+      this.headerElement.classList.add("nav-up");
+    } else {
+      if (st + window.innerHeight < document.body.clientHeight) {
+        this.headerElement.classList.remove('nav-up')
+      }
+    }
+    this.lastScroll = st;
+  }
+
 
 }

@@ -29,8 +29,12 @@ nz-header {
 }
 
 .app-header {
-  position: relative;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  height: 67px;
+  position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
   a {
     &:hover {
       text-decoration: none;
@@ -120,6 +124,9 @@ nz-header {
       transition: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
     }
   }
+}
+.nav-up {
+  top: -67px;
 }
 
 .drawer {
