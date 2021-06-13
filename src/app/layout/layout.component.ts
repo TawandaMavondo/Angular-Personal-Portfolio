@@ -109,7 +109,7 @@ export class LayoutComponent implements OnInit {
   private onWindowsScroll(e) {
     // this.didScroll = true;
     console.log("scrolled");
-    this.hasScrolled()
+    // this.hasScrolled()
   }
 
   private hasScrolled() {
