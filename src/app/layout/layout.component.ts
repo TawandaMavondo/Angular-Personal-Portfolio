@@ -1,8 +1,6 @@
-import { DOCUMENT, ViewportScroller } from '@angular/common';
-import { Inject } from '@angular/core';
+import {  ViewportScroller } from '@angular/common';
 import { Component, OnInit, HostListener } from '@angular/core';
 import { trigger, state, transition, style, animate } from '@angular/animations';
-import { toInteger } from '@ng-bootstrap/ng-bootstrap/util/util';
 type NavItem = {
   name: string,
   id: string,
