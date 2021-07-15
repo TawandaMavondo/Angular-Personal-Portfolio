@@ -26,7 +26,8 @@ registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -48,6 +49,6 @@ registerLocaleData(en);
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
-  exports: [RouterModule]
+  exports: [RouterModule, NzLayoutModule, NzMenuModule]
 })
 export class AppModule { }

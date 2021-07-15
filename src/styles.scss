@@ -135,3 +135,7 @@ a {
 }
 
 /* Importing Bootstrap SCSS file. */
+
+.cdk-overlay-container{
+  z-index: 300 !important;
+}

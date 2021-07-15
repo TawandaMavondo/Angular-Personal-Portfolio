@@ -36,8 +36,9 @@ export class LayoutComponent implements OnInit {
   }
 
 
-  public open(): void {
+  public toggleDrawer(): void {
     if (this.drawerButton.classList.contains("ham-box-open")) {
+      this.close();
       return;
     }
     this.drawerButton.classList.add('ham-box-open');

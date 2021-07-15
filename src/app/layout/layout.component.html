@@ -9,7 +9,7 @@
                 <{{"T.Mavondo>"}}
               </h4>
             </a>
-            <button class="hamburger ml-auto" (click)="open()">
+            <button class="hamburger ml-auto" (click)="toggleDrawer()">
               <div class="ham-box">
                 <div class="ham-box-inner"></div>
               </div>
@@ -31,7 +31,7 @@
       </router-outlet>
     </div>
   </nz-layout>
-  <nz-drawer class="drawer" [nzZIndex]='10' [nzBodyStyle]="drawerBodyStyles" [nzClosable]="false" [nzVisible]="visible"
+  <nz-drawer class="drawer" [nzZIndex]='100' [nzBodyStyle]="drawerBodyStyles" [nzClosable]="false" [nzVisible]="visible"
     nzPlacement="right" (nzOnClose)="close()">
     <ng-container *nzDrawerContent>
       <ul class="nav mt-5">

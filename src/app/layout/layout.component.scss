@@ -31,10 +31,14 @@ nz-header {
 .app-header {
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
   // height: 67px;
+
   position: fixed;
   top: 0;
   transition: top 0.2s ease-in-out;
   width: 100%;
+  .container-fluid{
+    position: relative;
+  }
   a {
     &:hover {
       text-decoration: none;
@@ -141,13 +145,14 @@ nz-header {
   }
 }
 
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    position: absolute;
+    right: 1.5rem;
     align-items: center;
     justify-content: center;
-    position: relative;
-    z-index: 30000;
     margin-right: -15px;
     padding: 15px;
     border: 0;
