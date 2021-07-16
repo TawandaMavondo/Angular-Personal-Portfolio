@@ -95,10 +95,13 @@
       display: flex;
       align-items: flex-start;
       .project-img-container{
-        width: 70%;
+        width: 70%;height: 350px;
+        overflow: hidden;
+        position: relative;
         img {
           width: 100%;
           height: auto;
+          position:  absolute;
         }
       }
       .project-info {
