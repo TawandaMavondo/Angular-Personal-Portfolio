@@ -1,4 +1,9 @@
 @import "./../styles/colors.scss";
+@font-face {
+  font-family: "Over The Rainbow";
+  src: url("./../../assets/font/OvertheRainbow-Regular.ttf"), format("truetype"), local("Over The Rainbow");
+}
+//@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 :host {
   display: flex;
   text-rendering: optimizeLegibility;
@@ -36,7 +41,7 @@ nz-header {
   top: 0;
   transition: top 0.2s ease-in-out;
   width: 100%;
-  .container-fluid{
+  .container-fluid {
     position: relative;
   }
   a {
@@ -46,6 +51,8 @@ nz-header {
   }
   h4 {
     font-size: 2em;
+    font-family: "Over The Rainbow",cursive !important;
+    // font-family: 'Dancing Script', cursive;
   }
   .navigation {
     .nav {
@@ -144,7 +151,6 @@ nz-header {
     }
   }
 }
-
 
 @media (max-width: 768px) {
   .hamburger {
