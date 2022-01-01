@@ -4,7 +4,7 @@
       <div class="app-header">
         <div class="container-fluid py-4 px-3">
           <div class="row align-items-center mx-0">
-            <a href="/" class="logo">
+            <a routerLink="/" class="logo">
               <h4 class="green-color"><{{ "f(code)>" }}</h4>
             </a>
             <button class="hamburger ml-auto" (click)="toggleDrawer()">
@@ -20,7 +20,8 @@
                 >
                   <a
                     class="nav-link blue-black"
-                    id="#{{ item.id }}"
+                    id="#{{ item?.id }}"
+                    routerLink="{{ item.href }}"
                   >
                     <span class="green-color">0{{ i + 1 }}.</span>
                     {{ item.name }}</a
@@ -32,14 +33,11 @@
         </div>
       </div>
     </nz-header>
-    <div
-      class="page-wrapper"
-      data-spy="scroll"
-      wmAnimateView
-      useElement
-      cdkScrollable
-    >
+    <div class="page-wrapper">
       <router-outlet> </router-outlet>
+      <div class="section mb-0" id="">
+        <app-footer> </app-footer>
+      </div>
     </div>
   </nz-layout>
   <nz-drawer
@@ -54,7 +52,7 @@
     <ng-container *nzDrawerContent>
       <ul class="nav mt-5">
         <li *ngFor="let item of navItems; let i = index" class="nav-item py-4">
-          <a class="nav-link blue-black" (click)="scrollToSection(item.id)">
+          <a class="nav-link blue-black" routerLink="{{ item.href }}">
             <span class="green-color">0{{ i + 1 }}.</span> {{ item.name }}</a
           >
         </li>

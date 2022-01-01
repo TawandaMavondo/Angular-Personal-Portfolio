@@ -9,7 +9,7 @@ import {
 } from '@angular/animations';
 type NavItem = {
   name: string;
-  id: string;
+  id?: string;
   href?: string;
 };
 @Component({
@@ -37,16 +37,12 @@ export class LayoutComponent implements OnInit {
 
   public navItems: NavItem[] = [
     {
-      name: 'About Me',
-      id: 'about-section',
+      name: 'Services',
+      href: '/services',
     },
     {
-      name: 'Experince',
-      id: 'experience-section',
-    },
-    {
-      name: 'Portfolio',
-      id: 'portfolio-section',
+      name: 'Technologies',
+      href: '/technologies',
     },
     {
       name: 'Blog',

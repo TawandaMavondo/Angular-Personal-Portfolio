@@ -5,7 +5,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { RouterModule } from '@angular/router';
 import { routes } from './layout.routes';
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
-
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [LayoutComponent],
@@ -13,8 +13,9 @@ import { NzDrawerModule } from 'ng-zorro-antd/drawer';
     CommonModule,
     NzLayoutModule,
     RouterModule.forRoot(routes),
-    NzDrawerModule
+    NzDrawerModule,
+    ComponentsModule,
   ],
-  exports: [LayoutComponent, RouterModule]
+  exports: [LayoutComponent, RouterModule],
 })
-export class LayoutModule { }
+export class LayoutModule {}

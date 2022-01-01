@@ -22,13 +22,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { AnimateModule } from './animate/animate.module';
+import { ServicesPageModule } from './servicespage/servicespage.module';
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     NzLayoutModule,
@@ -42,13 +40,15 @@ registerLocaleData(en);
     LayoutModule,
     ComponentsModule,
     HomepageModule,
-    // FontAwesomeModule,
+    ServicesPageModule, // FontAwesomeModule,
     AnimateModule,
     NgbModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],
-  exports: [RouterModule, NzLayoutModule, NzMenuModule]
+  exports: [RouterModule, NzLayoutModule, NzMenuModule],
 })
-export class AppModule { }
+export class AppModule {}
