@@ -4,10 +4,8 @@
       <div class="app-header">
         <div class="container-fluid py-4 px-3">
           <div class="row align-items-center mx-0">
-            <a href="#" class="logo">
-              <h4 class="green-color">
-                <{{"f(code)>"}}
-              </h4>
+            <a href="/" class="logo">
+              <h4 class="green-color"><{{ "f(code)>" }}</h4>
             </a>
             <button class="hamburger ml-auto" (click)="toggleDrawer()">
               <div class="ham-box">
@@ -16,9 +14,17 @@
             </button>
             <div class="navigation ml-auto">
               <ul class="nav">
-                <li *ngFor="let item of navItems,let i =index" class="nav-item">
-                  <a class="nav-link blue-black " (click)="scrollToSection(item.id)">
-                    <span class="green-color">0{{i+1}}.</span> {{item.name}}</a>
+                <li
+                  *ngFor="let item of navItems; let i = index"
+                  class="nav-item"
+                >
+                  <a
+                    class="nav-link blue-black"
+                    id="#{{ item.id }}"
+                  >
+                    <span class="green-color">0{{ i + 1 }}.</span>
+                    {{ item.name }}</a
+                  >
                 </li>
               </ul>
             </div>
@@ -26,18 +32,31 @@
         </div>
       </div>
     </nz-header>
-    <div class="page-wrapper" wmAnimateView useElement cdkScrollable>
-      <router-outlet>
-      </router-outlet>
+    <div
+      class="page-wrapper"
+      data-spy="scroll"
+      wmAnimateView
+      useElement
+      cdkScrollable
+    >
+      <router-outlet> </router-outlet>
     </div>
   </nz-layout>
-  <nz-drawer class="drawer" [nzZIndex]='100' [nzBodyStyle]="drawerBodyStyles" [nzClosable]="false" [nzVisible]="visible"
-    nzPlacement="right" (nzOnClose)="close()">
+  <nz-drawer
+    class="drawer"
+    [nzZIndex]="100"
+    [nzBodyStyle]="drawerBodyStyles"
+    [nzClosable]="false"
+    [nzVisible]="visible"
+    nzPlacement="right"
+    (nzOnClose)="close()"
+  >
     <ng-container *nzDrawerContent>
       <ul class="nav mt-5">
-        <li *ngFor="let item of navItems,let i =index" class="nav-item py-4">
-          <a class="nav-link blue-black " (click)="scrollToSection(item.id)">
-            <span class="green-color">0{{i+1}}.</span> {{item.name}}</a>
+        <li *ngFor="let item of navItems; let i = index" class="nav-item py-4">
+          <a class="nav-link blue-black" (click)="scrollToSection(item.id)">
+            <span class="green-color">0{{ i + 1 }}.</span> {{ item.name }}</a
+          >
         </li>
       </ul>
     </ng-container>

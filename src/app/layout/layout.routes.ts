@@ -4,7 +4,7 @@ import { HomepageComponent } from './../homepage/homepage.component';
 
 export const routes: Routes = [
   {
-    path: 'app',
+    path: '',
     pathMatch: 'full',
     component: LayoutComponent,
     children: [
