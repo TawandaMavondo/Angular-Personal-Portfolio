@@ -9,17 +9,12 @@
           <a href="#" class="btn d-block"> Hire Me </a>
         </div>
       </div>
-      <div class="col-md-6">
-        <!-- <img src="./../../../assets/img/service.jpg" style="height: 250px;" class="" alt="Profile Picture" /> -->
-      </div>
+
     </div>
   </section>
 
   <div class="row">
-    <div
-      *ngFor="let card of cards"
-      class="col-md-4 mb-4 d-flex align-items-stretch"
-    >
+    <div *ngFor="let card of cards" class="col-md-4 mb-4 d-flex align-items-stretch">
       <app-service-card [cardDetails]="card"> </app-service-card>
     </div>
   </div>
