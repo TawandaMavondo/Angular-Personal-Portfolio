@@ -38,12 +38,12 @@ export class ServicesPageComponent implements OnInit {
       description:
         'Cloud app development implies building apps that run in the cloud and may leverage cloud features and services offered by cloud vendors.I have quickly and reliably delivers cloud-native and cloud-only apps that efficiently employ all cloud capabilities.',
     },
-    {
-      icon: faCode,
-      title: 'SaaS Products',
-      description:
-        'Software-as-a-Service (SaaS) development services cover design, implementation, deployment, and maintenance of multi-tenancy applications. I am the developer  you can trust with delivery, revamp, support, and growth of your SaaS product',
-    },
+    // {
+    //   icon: faCode,
+    //   title: 'SaaS Products',
+    //   description:
+    //      'Software-as-a-Service (SaaS) development services cover design, implementation, deployment, and maintenance of multi-tenancy applications. I am the developer  you can trust with delivery, revamp, support, and growth of your SaaS product',
+    // },
   ];
 
   constructor() {}
