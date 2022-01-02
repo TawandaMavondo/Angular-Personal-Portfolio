@@ -136,6 +136,40 @@ a {
 
 /* Importing Bootstrap SCSS file. */
 
-.cdk-overlay-container{
+.cdk-overlay-container {
   z-index: 300 !important;
+}
+.banner-custom {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  .intro {
+    text-align: left;
+    p {
+      font-size: 20px;
+    }
+    h1,
+    h2 {
+      font-size: clamp(40px, 8vw, 80px);
+      font-weight: 400;
+      font-weight: bold;
+    }
+  }
+  p {
+    max-width: 500px;
+    text-align: start;
+    font-size: 20px;
+  }
+  .btn {
+    display: block !important;
+    border: 1.5px solid #64ffda;
+    color: #64ffda;
+    max-width: 150px;
+    padding: 12px;
+    transition-property: background;
+    transition-duration: 500ms;
+    &:hover {
+      background-color: rgba(#64ffda, 0.18);
+    }
+  }
 }

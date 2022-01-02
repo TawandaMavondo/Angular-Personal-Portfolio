@@ -1,0 +1,22 @@
+@import "../../styles/colors.scss";
+
+.nz-card {
+  transition-duration: 300ms;
+  transition-property: transform;
+  background: $lightNavy;
+  border: none;
+  .card-title {
+    font-weight: bold;
+    font-family: "SF Mono Regular";
+    font-size: clamp(17px, 6vw, 22px);
+    margin-bottom: 15px;
+    transition-property: color;
+    transition-duration: 300ms;
+  }
+  &:hover {
+    transform: translateY(-10px);
+    .card-title {
+      color: $fontGreen;
+    }
+  }
+}

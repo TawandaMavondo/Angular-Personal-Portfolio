@@ -6,7 +6,6 @@ import { ServicesPageComponent } from '../servicespage/servicespage.component';
 export const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
     component: LayoutComponent,
     children: [
       {
