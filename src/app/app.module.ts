@@ -14,7 +14,6 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './layout/layout.module';
-import { GraphQLModule } from './graphql.module';
 import { ComponentsModule } from './components/components.module';
 import { HomepageModule } from './homepage/homepage.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -36,7 +35,6 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
-    GraphQLModule,
     LayoutModule,
     ComponentsModule,
     HomepageModule,
