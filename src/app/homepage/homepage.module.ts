@@ -10,8 +10,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ProjectCardComponent } from '../components/projectcard/projectcard.component';
 import { ComponentsModule } from '../components/components.module';
 import { AnimateModule } from '../animate/animate.module';
-
-
+import { ServicesPageModule } from '../servicespage/servicespage.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,9 @@ import { AnimateModule } from '../animate/animate.module';
     FontAwesomeModule,
     NgbNavModule,
     AnimateModule,
-    ComponentsModule
+    ComponentsModule,
+    ServicesPageModule
+
   ],
   exports: [HomepageComponent, AboutComponent, ExperienceComponent,]
 })

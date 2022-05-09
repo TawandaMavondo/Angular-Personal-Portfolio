@@ -19,7 +19,9 @@ export class ServiceCardComponent implements OnInit {
 
   @Input()
   public cardDetails: ServiceCard;
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('Nodejs')
+  }
 }

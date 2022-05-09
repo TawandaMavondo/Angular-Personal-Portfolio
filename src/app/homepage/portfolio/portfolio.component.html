@@ -44,4 +44,20 @@
   <div class="d-flex load-more justify-content-center mt-3">
     <a href="#" class="btn">Show More</a>
   </div>
-</div>
+
+  <div class="service-section mt-5 row">
+    <div>
+      <h2 class="my-3 text-center">
+        I build custom applications and websites based on your business' needs, Making sure you get the most out of your
+        budget
+        and
+        time.
+      </h2>
+      <h2 class="my-4 text-center">
+        Below are some of the services that I provide.
+      </h2>
+    </div>
+    <div *ngFor="let card of serviceCards" class="col-md-4 mb-4 d-flex align-items-stretch">
+      <app-service-card [cardDetails]="card"> </app-service-card>
+    </div>
+  </div>

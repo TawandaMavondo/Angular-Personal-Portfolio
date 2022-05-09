@@ -9,6 +9,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [ServicesPageComponent, ServiceCardComponent],
   imports: [CommonModule, BannerModule, ComponentsModule, FontAwesomeModule],
-  exports: [ServicesPageComponent],
+  exports: [ServicesPageComponent, ServiceCardComponent],
 })
-export class ServicesPageModule {}
+export class ServicesPageModule { }
